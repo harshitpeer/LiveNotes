@@ -12,7 +12,11 @@ socket.on("newUser", () => {
   socket.emit("sendText", id, textBox.value);
 });
 socket.on("receiveText", text => {
+  const selectionStart = textBox.selectionStart
+  const selectionEnd = textBox.selectionEnd
   textBox.value = text;
+  textBox.selectionStart = selectionStart
+  textBox.selectionEnd = selectionEnd
 });
 textBox.addEventListener("keyup", () => {
   socket.emit("sendText", id, textBox.value);
