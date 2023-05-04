@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "engine.io": ">=6.2.1",
+    "engine.io": ">=6.4.2",
     "socket.io": "^2.4.1"
   }
 }
